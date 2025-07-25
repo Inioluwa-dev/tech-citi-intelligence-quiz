@@ -1,0 +1,97 @@
+/* Quiz Page Styles (moved from style.css) */
+.quiz-header {
+  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+#quiz-container, #results-container {
+  min-height: 350px;
+  border: 2px solid #ff9800;
+  box-shadow: 0 4px 24px rgba(255,152,0,0.12);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(128,128,128,0.08);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.btn-orange {
+  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.15);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-orange:hover {
+  background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+  box-shadow: 0 4px 16px rgba(255,152,0,0.25);
+}
+
+.badge.bg-orange {
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.12);
+}
+
+.display-4 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+}
+body {
+  background-color: #f8f9fa;
+}
+
+.text-orange {
+  color: #ff8800 !important;
+}
+
+.btn-orange {
+  background-color: #ff8800;
+  color: #fff;
+  border: none;
+}
+
+.btn-orange:hover, .btn-orange:focus {
+  background-color: #e67600;
+  color: #fff;
+}
+/* =========================
+   QUIZ STYLES
+   ========================= */
+
+.quiz-header {
+  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+#quiz-container, #results-container {
+  min-height: 350px;
+  border: 2px solid #ff9800;
+  box-shadow: 0 4px 24px rgba(255,152,0,0.12);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(128,128,128,0.08);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 991px) {
+  .quiz-header {
+    font-size: 1.2rem;
+  }
+  #quiz-container, #results-container {
+    padding: 1rem;
+    min-height: 250px;
+  }
+}
+
+.badge.bg-orange {
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.12);
+}

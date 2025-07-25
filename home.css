@@ -1,0 +1,484 @@
+/* Responsive: Our Services section for tablets */
+@media (max-width: 991px) {
+  .services-section {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: unset;
+  }
+  .service-col {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+  .service-card {
+    width: 100%;
+    min-width: 0;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 24px rgba(255,152,0,0.10);
+    height: auto;
+  }
+  .service-card-body {
+    padding: 2rem 1.2rem;
+    height: 100%;
+  }
+}
+/* Home Page Media Queries (moved from style.css) */
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 70vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 1.2rem;
+  }
+  .hero-content {
+    border-radius: 1.2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(255,140,0,0.08);
+  }
+  .hero-section h1 {
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+  }
+  .hero-section .btn-orange {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+  .hero-shapes > div {
+    width: 60px !important;
+    height: 60px !important;
+    opacity: 0.10;
+  }
+  .how-tech-section {
+    min-height: unset;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 1rem;
+  }
+  .how-tech-section .feature-block {
+    border-radius: 1rem;
+    padding: 1.2rem;
+  }
+  .how-tech-section h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  .hero-section {
+    min-height: 60vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0.7rem;
+  }
+  .hero-content {
+    border-radius: 0.7rem;
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-section h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .hero-section .btn-orange {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.7rem;
+  }
+  .hero-shapes > div {
+    width: 32px !important;
+    height: 32px !important;
+    opacity: 0.08;
+  }
+  .how-tech-section h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.2px;
+  }
+  .how-tech-section .feature-block {
+    border-radius: 0.7rem;
+    padding: 1rem 0.5rem;
+  }
+}
+/* Home Page Styles (moved from style.css) */
+.hero-section {
+  min-height: 100vh;
+  background: url('images/web-sphere.jpg') center center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content {
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(255,140,0,0.10);
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #ff9800;
+}
+.hero-section .btn-orange {
+  font-size: 1.3rem;
+  border-radius: 1.2rem;
+  letter-spacing: 1px;
+}
+.hero-shapes > div {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.14;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .hero-section {
+    min-height: 70vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 1.2rem;
+  }
+  .hero-content {
+    border-radius: 1.2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(255,140,0,0.08);
+  }
+  .hero-section h1 {
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+  }
+  .hero-section .btn-orange {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+  .hero-shapes > div {
+    width: 60px !important;
+    height: 60px !important;
+    opacity: 0.10;
+  }
+}
+@media (max-width: 575px) {
+  .hero-section {
+    min-height: 60vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0.7rem;
+  }
+  .hero-content {
+    border-radius: 0.7rem;
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-section h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .hero-section .btn-orange {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.7rem;
+  }
+  .hero-shapes > div {
+    width: 32px !important;
+    height: 32px !important;
+    opacity: 0.08;
+  }
+}
+@media (max-width: 991px) {
+  .hero-content {
+    border-radius: 1.2rem;
+    padding: 2rem 1rem;
+  }
+  .hero-section h1 {
+    font-size: 2.1rem;
+  }
+}
+
+/* How Tech Helps Section */
+.how-tech-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg,#e3f2fd 0%,#fff7e6 100%);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(255,140,0,0.08);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.how-tech-section .feature-block {
+  background: linear-gradient(120deg,#fff7e6 0%,#e3f2fd 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px rgba(255,152,0,0.08);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.how-tech-section .feature-block:hover {
+  box-shadow: 0 8px 32px rgba(255,140,0,0.15);
+  transform: translateY(-6px) scale(1.03);
+}
+.how-tech-section h2 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #ff9800;
+}
+.how-tech-section h4 {
+  font-size: 1.3rem;
+  color: #ff9800;
+}
+@media (max-width: 991px) {
+  .how-tech-section {
+    min-height: unset;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 1rem;
+  }
+  .how-tech-section .feature-block {
+    border-radius: 1rem;
+    padding: 1.2rem;
+  }
+  .how-tech-section h2 {
+    font-size: 2rem;
+  }
+}
+/* =========================
+   HOME PAGE STYLES
+   ========================= */
+
+/* Hero Section */
+.hero-row {
+  min-height: 80vh;
+}
+.hero-title {
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+.hero-lead {
+  font-size: 1.4rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero-btn {
+  font-size: 1.3rem;
+  border-radius: 1.2rem;
+  letter-spacing: 1px;
+}
+.hero-shape.shape-1 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg,#ff9800 0%,#ffe0b2 100%);
+  border-radius: 50%;
+  opacity: 0.18;
+}
+.hero-shape.shape-2 {
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg,#e3f2fd 0%,#ff9800 100%);
+  border-radius: 50%;
+  opacity: 0.14;
+}
+.hero-shape.shape-3 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg,#ffc107 0%,#e3f2fd 100%);
+  border-radius: 50%;
+  opacity: 0.12;
+}
+
+/* How Tech Helps Section */
+.how-tech-content {
+  background: rgba(255,255,255,0.92);
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(255,152,0,0.10);
+}
+.how-tech-title {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.feature-bg-1 {
+  background: linear-gradient(120deg,#fff7e6 0%,#e3f2fd 100%);
+}
+.feature-bg-2 {
+  background: linear-gradient(120deg,#e3f2fd 0%,#fff7e6 100%);
+}
+.feature-heading {
+  color: #ff9800;
+}
+.feature-desc {
+  font-size: 1.15rem;
+  color: #333;
+}
+.card:hover{
+  box-shadow: 0 8px 32px rgba(255,140,0,0.15);
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Services Section */
+.services-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: stretch;
+}
+.service-col {
+  height: calc(80vh - 120px);
+}
+.service-card {
+  height: 70%;
+}
+.service-card-body {
+  height: 100%;
+}
+.service-title {
+  font-size: 2rem;
+}
+.service-desc {
+  font-size: 1.2rem;
+}
+
+/* Community Section */
+.community-card {
+  background: linear-gradient(135deg, #fff7e6 0%, #ffe0b2 100%);
+}
+
+@media (max-width: 991px) {
+  .services-section {
+    min-height: unset;
+    flex-direction: column;
+  }
+  .service-col {
+    height: auto;
+  }
+  .service-card {
+    height: auto;
+  }
+  .hero-title {
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+  }
+  .hero-lead {
+    font-size: 1.1rem;
+  }
+  .how-tech-title {
+    font-size: 2rem;
+  }
+  /* ...existing code... */
+  }
+  .hero-content {
+    border-radius: 1.2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(255,140,0,0.08);
+  }
+  .hero-section h1 {
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+  }
+  .hero-section .btn-orange {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+  }
+  .hero-shapes > div {
+    width: 60px !important;
+    height: 60px !important;
+    opacity: 0.10;
+  }
+  .how-tech-section {
+    min-height: unset;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 1rem;
+  }
+  .how-tech-section .feature-block {
+    border-radius: 1rem;
+    padding: 1.2rem;
+  }
+  .how-tech-section h2 {
+    font-size: 2rem;
+  }
+@media (max-width: 575px) {
+  .service-title {
+    font-size: 1.2rem;
+  }
+  .service-desc {
+    font-size: 1rem;
+  }
+  .intelligence-section {
+    min-height: unset;
+    padding: 1rem 0;
+  }
+  .badge.bg-orange {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.7rem !important;
+  }
+  .hero-title {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .hero-lead {
+    font-size: 1rem;
+    padding: 0 0.2rem;
+  }
+  .hero-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.7rem;
+  }
+  .how-tech-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.2px;
+  }
+  .how-tech-content {
+    border-radius: 0.7rem;
+    padding: 1rem 0.5rem;
+  }
+  .feature-desc {
+    font-size: 0.98rem;
+  }
+  .hero-section {
+    min-height: 60vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0.7rem;
+  }
+  .hero-content {
+    border-radius: 0.7rem;
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero-section h1 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+  }
+  .hero-section .btn-orange {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.7rem;
+  }
+  .hero-shapes > div {
+    width: 32px !important;
+    height: 32px !important;
+    opacity: 0.08;
+  }
+}
