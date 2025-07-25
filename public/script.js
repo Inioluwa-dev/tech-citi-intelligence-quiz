@@ -191,7 +191,26 @@ function startTimer() {
     updateTimerDisplay();
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      showResults();
+      // Show alert and offer retry or go home
+      setTimeout(() => {
+        const quizContainer = document.getElementById('quiz-container');
+        quizContainer.innerHTML = `
+          <div class="alert alert-warning text-center">
+            <strong>Time's up!</strong> You did not answer the question in time.<br>
+            <button id="retry-btn" class="btn btn-orange mt-3">Try Again</button>
+            <a href="index.html" class="btn btn-secondary mt-3 ms-2">Go to Home</a>
+          </div>
+        `;
+        // Add event listener for retry
+        document.getElementById('retry-btn').onclick = function() {
+          currentQuestion = 0;
+          for (const k in scores) scores[k] = 0;
+          document.getElementById('results-container').innerHTML = '';
+          timeLeft = totalTime;
+          showQuestion(currentQuestion);
+          startTimer();
+        };
+      }, 100);
     }
   }, 1000);
 }
