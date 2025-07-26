@@ -356,6 +356,48 @@ function showResults() {
     <p class="text-success fw-bold"><i class="fa-solid fa-thumbs-up me-2"></i>Keep exploring, learning, and growing your unique talents!</p>
   </div>`;
   document.getElementById('results-container').innerHTML = resultHtml;
+
+  // Store plain text version of results for export
+  let textResult = 'Your Dominant Intelligence\n';
+  dominant.forEach(key => {
+    const intel = intelligences.find(i => i.key === key);
+    const rec = recommendations[key];
+    textResult += `\n${intel.name}\n${intel.description}\n`;
+    textResult += `Tech Path: ${rec.path}\n`;
+    textResult += `Careers: ${rec.careers.join(', ')}\n`;
+    textResult += `Courses: ${rec.courses.join(', ')}\n`;
+  });
+  textResult += '\nKeep exploring, learning, and growing your unique talents!';
+
+  // Set up Copy and Download buttons
+  setTimeout(() => {
+    const copyBtn = document.getElementById('copy-results-btn');
+    const downloadBtn = document.getElementById('download-results-btn');
+    if (copyBtn) {
+      copyBtn.onclick = function() {
+        navigator.clipboard.writeText(textResult)
+          .then(() => {
+            copyBtn.innerText = 'Copied!';
+            setTimeout(() => copyBtn.innerHTML = '<i class="fa-solid fa-copy me-1"></i>Copy', 1500);
+          });
+      };
+    }
+    if (downloadBtn) {
+      downloadBtn.onclick = function() {
+        const blob = new Blob([textResult], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'techciti-quiz-results.txt';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        }, 100);
+      };
+    }
+  }, 100);
 }
 
 // Show first question automatically on page load
