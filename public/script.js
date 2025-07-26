@@ -1,23 +1,24 @@
 // Confirm before leaving quiz for Home, but exempt results page
 window.addEventListener('DOMContentLoaded', () => {
-  const homeLink = document.getElementById('home-link');
-  if (homeLink) {
-    homeLink.addEventListener('click', function(e) {
-      // Only show confirmation if quizPage is visible
+  const homeLinks = document.querySelectorAll('.home-link');
+
+  homeLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
       const quizPage = document.getElementById('quiz-page');
       const resultsPage = document.getElementById('results-page');
       const quizVisible = quizPage && !quizPage.classList.contains('d-none');
       const resultsVisible = resultsPage && !resultsPage.classList.contains('d-none');
+
       if (quizVisible && !resultsVisible) {
-        const confirmLeave = confirm('Are you sure you want to quit the quiz?');
+        const confirmLeave = confirm('Are you sure you want to exit this quiz? \nYour answers will be forfeited.');
         if (!confirmLeave) {
-          e.preventDefault();
+          e.preventDefault(); // stop the link from navigating
         }
       }
-      // If results are showing, allow navigation without confirmation
     });
-  }
+  });
 });
+
 // Counter update integrated with quiz logic
 function updateCounter() {
   document.getElementById('current-question').textContent = currentQuestion + 1;

@@ -7,7 +7,7 @@
   box-shadow: 2px 0 16px rgba(255,152,0,0.10);
 }
 .offcanvas-header {
-  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  background: linear-gradient(90deg, #FF5733 0%, #ffc107 100%);
   border-top-right-radius: 1.5rem;
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
@@ -22,7 +22,7 @@
   gap: 0.5rem;
 }
 .offcanvas .nav-link {
-  color: #ff9800 !important;
+  color: #FF5733 !important;
   font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 0.7rem;
@@ -31,11 +31,11 @@
 }
 .offcanvas .nav-link.active, .offcanvas .nav-link:focus, .offcanvas .nav-link:hover {
   background: #ffe0b2;
-  color: #e67600 !important;
+  color: #FF5733 !important;
 }
 .navbar-toggler {
   border: none;
-  background: #ff9800;
+  background: #FF5733;
   border-radius: 0.7rem;
   padding: 0.4rem 0.7rem;
   box-shadow: 0 2px 8px rgba(255,152,0,0.10);
@@ -50,14 +50,14 @@
 }
 /* General Utility Styles (restored) */
 .bg-orange {
-  background-color: #ff9800 !important;
+  background-color: #FF5733 !important;
   color: #fff !important;
 }
 
 .badge.bg-orange {
   font-size: 1.2rem;
   border-radius: 1rem;
-  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  background: linear-gradient(90deg, #FF5733 0%, #ffc107 100%);
   color: #fff;
   box-shadow: 0 2px 8px rgba(255,152,0,0.12);
 }
@@ -72,22 +72,22 @@ body {
 }
 
 .text-orange {
-  color: #ff8800 !important;
+  color: #FF5733 !important;
 }
 
 .btn-orange {
-  background-color: #ff8800;
+  background-color: #FF5733;
   color: #fff;
   border: none;
 }
 
 .btn-orange:hover, .btn-orange:focus {
-  background-color: #e67600;
+  background-color: #FF5733;
   color: #fff;
 }
 /* Cool Navbar Styles */
 .navbar {
-  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%) !important;
+  background: linear-gradient(90deg, #FF5733 0%, #ffc107 100%) !important;
   border-radius: 1.5rem;
   box-shadow: 0 4px 16px rgba(255,152,0,0.12);
   margin-top: 18px;
@@ -111,99 +111,19 @@ body {
   transition: color 0.2s;
 }
 .navbar .nav-link:hover {
-  color: #fffde7 !important;
+  color: #fff !important;
   text-decoration: underline;
 }
 /* Modern Quiz Styles */
 .quiz-header {
-  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+  background: linear-gradient(90deg, #FF5733 0%, #ffc107 100%);
   color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
 .bg-orange {
-  background-color: #ff9800 !important;
+  background-color: #FF5733 !important;
   color: #fff !important;
 }
 
 
-#quiz-container, #results-container {
-  min-height: 350px;
-  border: 2px solid #ff9800;
-  box-shadow: 0 4px 24px rgba(255,152,0,0.12);
-}
-
-.btn-orange {
-  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
-  color: #fff;
-  border: none;
-  box-shadow: 0 2px 8px rgba(255,152,0,0.15);
-  transition: background 0.2s, box-shadow 0.2s;
-}
-.btn-orange:hover {
-  background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
-  box-shadow: 0 4px 16px rgba(255,152,0,0.25);
-}
-
-.badge.bg-orange {
-  font-size: 1.2rem;
-  border-radius: 1rem;
-  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(255,152,0,0.12);
-}
-
-.display-4 {
-  font-size: 2.8rem;
-  letter-spacing: 1px;
-}
-body {
-  background-color: #f8f9fa;
-}
-
-.text-orange {
-  color: #ff8800 !important;
-}
-
-.btn-orange {
-  background-color: #ff8800;
-  color: #fff;
-  border: none;
-}
-
-.btn-orange:hover, .btn-orange:focus {
-  background-color: #e67600;
-  color: #fff;
-}
-
-
-/* --- Navbar Styles (deduplicated & consolidated) --- */
-.navbar {
-  background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%) !important;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 16px rgba(255,152,0,0.12);
-  margin-top: 18px;
-  border-bottom: 2px solid #eee;
-}
-.navbar .navbar-brand {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff !important;
-  letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-}
-.navbar .navbar-brand i {
-  margin-right: 10px;
-}
-.navbar .nav-link {
-  color: #fff !important;
-  font-weight: 500;
-  font-size: 1.1rem;
-  margin-left: 18px;
-  transition: color 0.2s;
-}
-.navbar .nav-link:hover {
-  color: #fffde7 !important;
-  text-decoration: underline;
-}
