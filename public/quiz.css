@@ -58,6 +58,24 @@ body {
   background-color: #FF5733;
   color: #fff;
 }
+
+/* Mobile styles for results page buttons */
+@media (max-width: 576px) {
+  #results-page .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    padding: 0.85rem 1rem;
+  }
+  #try-again-btn {
+    margin-top: 1.2rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  #copy-results-btn, #download-results-btn {
+    margin-bottom: 0.5rem !important;
+  }
+}
 /* =========================
    QUIZ STYLES
    ========================= */
