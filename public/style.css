@@ -48,6 +48,9 @@ body {
   border-radius: 1.5rem;
   box-shadow: 0 4px 16px rgba(255,152,0,0.12);
   margin-top: 18px;
+  position: sticky;
+  top: 18px; 
+  z-index: 1030; 
 }
 
 .navbar .navbar-brand {
