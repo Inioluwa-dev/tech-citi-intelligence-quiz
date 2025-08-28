@@ -1,109 +1,7 @@
-/* Responsive: Our Services section for tablets */
-@media (max-width: 991px) {
-  .services-section {
-    flex-direction: column;
-    align-items: stretch;
-    min-height: unset;
-  }
-  .service-col {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: center;
-    height: auto;
-  }
-  .service-card {
-    width: 100%;
-    min-width: 0;
-    border-radius: 1.5rem;
-    box-shadow: 0 6px 24px rgba(255,152,0,0.10);
-    height: auto;
-  }
-  .service-card-body {
-    padding: 2rem 1.2rem;
-    height: 100%;
-  }
-}
-/* Home Page Media Queries (moved from style.css) */
-@media (max-width: 991px) {
-  .hero-section {
-    min-height: 70vh;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 1.2rem;
-  }
-  .hero-content {
-    border-radius: 1.2rem;
-    padding: 2rem 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(255,140,0,0.08);
-  }
-  .hero-section h1 {
-    font-size: 2.1rem;
-    letter-spacing: 1px;
-  }
-  .hero-section .btn-orange {
-    font-size: 1.1rem;
-    padding: 0.8rem 2rem;
-  }
-  .hero-shapes > div {
-    width: 60px !important;
-    height: 60px !important;
-    opacity: 0.10;
-  }
-  .how-tech-section {
-    min-height: unset;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 1rem;
-  }
-  .how-tech-section .feature-block {
-    border-radius: 1rem;
-    padding: 1.2rem;
-  }
-  .how-tech-section h2 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 575px) {
-  .hero-section {
-    min-height: 60vh;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 0.7rem;
-  }
-  .hero-content {
-    border-radius: 0.7rem;
-    padding: 1rem 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .hero-section h1 {
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
-  }
-  .hero-section .btn-orange {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.7rem;
-  }
-  .hero-shapes > div {
-    width: 32px !important;
-    height: 32px !important;
-    opacity: 0.08;
-  }
-  .how-tech-section h2 {
-    font-size: 1.2rem;
-    letter-spacing: 0.2px;
-  }
-  .how-tech-section .feature-block {
-    border-radius: 0.7rem;
-    padding: 1rem 0.5rem;
-  }
-}
-/* Home Page Styles (moved from style.css) */
+
+/* =========================
+   ORIGINAL HERO STYLES
+   ========================= */
 .hero-section {
   min-height: 100vh;
   background: url('images/web-sphere.jpg') center center/cover no-repeat;
@@ -139,6 +37,7 @@
   opacity: 0.14;
   z-index: 1;
 }
+
 @media (max-width: 991px) {
   .hero-section {
     min-height: 70vh;
@@ -167,6 +66,7 @@
     opacity: 0.10;
   }
 }
+
 @media (max-width: 575px) {
   .hero-section {
     min-height: 60vh;
@@ -195,290 +95,247 @@
     opacity: 0.08;
   }
 }
-@media (max-width: 991px) {
-  .hero-content {
-    border-radius: 1.2rem;
-    padding: 2rem 1rem;
-  }
-  .hero-section h1 {
-    font-size: 2.1rem;
-  }
-}
 
-/* How Tech Helps Section */
-.how-tech-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(120deg,#e3f2fd 0%,#fff7e6 100%);
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(255,140,0,0.08);
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.how-tech-section .feature-block {
-  background: linear-gradient(120deg,#fff7e6 0%,#e3f2fd 100%);
-  border-radius: 1.5rem;
-  box-shadow: 0 2px 12px rgba(255,152,0,0.08);
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.how-tech-section .feature-block:hover {
-  box-shadow: 0 8px 32px rgba(255,140,0,0.15);
-  transform: translateY(-6px) scale(1.03);
-}
-.how-tech-section h2 {
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  color: #FF5733;
-}
-.how-tech-section h4 {
-  font-size: 1.3rem;
-  color: #FF5733;
-}
-@media (max-width: 991px) {
-  .how-tech-section {
-    min-height: unset;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 1rem;
-  }
-  .how-tech-section .feature-block {
-    border-radius: 1rem;
-    padding: 1.2rem;
-  }
-  .how-tech-section h2 {
-    font-size: 2rem;
-  }
-}
-/* =========================
-   HOME PAGE STYLES
-   ========================= */
 
-/* Hero Section */
-.hero-row {
-  min-height: 80vh;
-}
-.hero-title {
-  letter-spacing: 2px;
-  font-size: 3rem;
-}
-.hero-lead {
-  font-size: 1.4rem;
-  color: #333;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.hero-btn {
-  font-size: 1.3rem;
-  border-radius: 1.2rem;
-  letter-spacing: 1px;
-}
-.hero-shape.shape-1 {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg,#FF5733 0%,#ffe0b2 100%);
-  border-radius: 50%;
-  opacity: 0.18;
-}
-.hero-shape.shape-2 {
-  position: absolute;
-  bottom: 12%;
-  right: 8%;
-  width: 160px;
-  height: 160px;
-  background: linear-gradient(135deg,#e3f2fd 0%,#FF5733 100%);
-  border-radius: 50%;
-  opacity: 0.14;
-}
-.hero-shape.shape-3 {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg,#ffc107 0%,#e3f2fd 100%);
-  border-radius: 50%;
-  opacity: 0.12;
-}
-
-/* How Tech Helps Section */
-.how-tech-content {
-  background: rgba(255,255,255,0.92);
-  border-radius: 2rem;
-  box-shadow: 0 4px 24px rgba(255,152,0,0.10);
-}
-.how-tech-title {
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-}
-.feature-bg-1 {
-  background: linear-gradient(120deg,#fff7e6 0%,#e3f2fd 100%);
-}
-.feature-bg-2 {
-  background: linear-gradient(120deg,#e3f2fd 0%,#fff7e6 100%);
-}
-.feature-heading {
-  color: #FF5733;
-}
-.feature-desc {
-  font-size: 1.15rem;
-  color: #333;
-}
-.card:hover{
-  box-shadow: 0 8px 32px rgba(255,140,0,0.15);
-  transform: translateY(-6px) scale(1.03);
-}
-
-/* Services Section */
-.services-section {
-  min-height: 80vh;
-  display: flex;
-  align-items: stretch;
-}
-.service-col {
-  height: calc(80vh - 120px);
-}
-.service-card {
-  height: 70%;
-}
-.service-card-body {
-  height: 100%;
-}
-.service-title {
-  font-size: 2rem;
-}
-.service-desc {
-  font-size: 1.2rem;
-}
-
-/* Community Section */
-.community-card {
-  background: linear-gradient(135deg, #fff7e6 0%, #ffe0b2 100%);
-}
-
-@media (max-width: 991px) {
-  .services-section {
-    min-height: unset;
-    flex-direction: column;
-  }
-  .service-col {
-    height: auto;
-  }
-  .service-card {
-    height: auto;
-  }
-  .hero-title {
-    font-size: 2.1rem;
-    letter-spacing: 1px;
-  }
-  .hero-lead {
-    font-size: 1.1rem;
-  }
-  .how-tech-title {
-    font-size: 2rem;
-  }
-  /* ...existing code... */
-  }
-  .hero-content {
-    border-radius: 1.2rem;
-    padding: 2rem 1rem;
-    margin-top: 1rem;
+/* --- General Section Enhancements --- */
+.section-title {
+    font-weight: 700;
+    color: #FF5733; /* Using the existing orange */
     margin-bottom: 1rem;
-    box-shadow: 0 2px 8px rgba(255,140,0,0.08);
-  }
-  .hero-section h1 {
-    font-size: 2.1rem;
-    letter-spacing: 1px;
-  }
-  .hero-section .btn-orange {
-    font-size: 1.1rem;
-    padding: 0.8rem 2rem;
-  }
-  .hero-shapes > div {
-    width: 60px !important;
-    height: 60px !important;
-    opacity: 0.10;
-  }
-  .how-tech-section {
-    min-height: unset;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 1rem;
-  }
-  .how-tech-section .feature-block {
-    border-radius: 1rem;
-    padding: 1.2rem;
-  }
-  .how-tech-section h2 {
-    font-size: 2rem;
-  }
-@media (max-width: 575px) {
-  .service-title {
-    font-size: 1.2rem;
-  }
-  .service-desc {
-    font-size: 1rem;
-  }
-  .intelligence-section {
-    min-height: unset;
-    padding: 1rem 0;
-  }
-  .badge.bg-orange {
-    font-size: 0.7rem !important;
-    padding: 0.3rem 0.7rem !important;
-  }
-  .hero-title {
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
-  }
-  .hero-lead {
-    font-size: 1rem;
-    padding: 0 0.2rem;
-  }
-  .hero-btn {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.7rem;
-  }
-  .how-tech-title {
-    font-size: 1.2rem;
-    letter-spacing: 0.2px;
-  }
-  .how-tech-content {
-    border-radius: 0.7rem;
-    padding: 1rem 0.5rem;
-  }
-  .feature-desc {
-    font-size: 0.98rem;
-  }
-  .hero-section {
-    min-height: 60vh;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 0.7rem;
-  }
-  .hero-content {
-    border-radius: 0.7rem;
-    padding: 1rem 0.5rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .hero-section h1 {
-    font-size: 1.3rem;
-    letter-spacing: 0.5px;
-  }
-  .hero-section .btn-orange {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.7rem;
-  }
-  .hero-shapes > div {
-    width: 32px !important;
-    height: 32px !important;
-    opacity: 0.08;
-  }
+}
+
+.section-subtitle {
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- "Why TechCiti" Section --- */
+.why-us-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.05);
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.feature-item .icon {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+/* --- "Intelligence Types" Section --- */
+.intelligence-section {
+    padding: 60px 0;
+}
+
+.intelligence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.intelligence-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intelligence-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 87, 51, 0.1);
+    border-color: #ff9800;
+}
+
+.intelligence-item i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff9800;
+}
+
+/* --- Testimonials Section --- */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: #f8f9fa; /* A slightly different background */
+}
+.testimonial-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 25px;
+}
+.testimonial-text::before {
+    content: '“';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-size: 3rem;
+    color: #ff9800;
+    opacity: 0.5;
+}
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+.author-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.author-name {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.author-title {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* --- How It Works Section --- */
+.how-it-works-section {
+    padding: 60px 0;
+}
+.step-item {
+    position: relative;
+    padding-top: 40px;
+}
+.step-icon {
+    font-size: 3.5rem;
+    color: #ff9800;
+    margin-bottom: 1rem;
+}
+
+/* --- Final CTA Section --- */
+.final-cta-section {
+    background: linear-gradient(135deg, #FF5733 0%, #ff9800 100%);
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* =========================
+   SCROLL ANIMATION
+   ========================= */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   RESPONSIVENESS
+   ========================= */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .final-cta-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .step-item:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+    .step-number {
+        background: #ff9800;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 auto 1rem auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .step-item::before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left: -50%;
+        width: 100%;
+        border-top: 2px dashed #ffc107;
+        z-index: 1;
+    }
+    .step-item:first-child::before {
+        display: none;
+    }
+    .step-number {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: #fdfcfa;
+        color: #ff9800;
+        font-weight: 700;
+        font-size: 1.2rem;
+        width: 50px;
+        height: 50px;
+        line-height: 46px;
+        border-radius: 50%;
+        border: 2px solid #ff9800;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .why-us-section,
+    .intelligence-section,
+    .testimonials-section,
+    .how-it-works-section,
+    .final-cta-section {
+        padding: 40px 15px;
+    }
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    .feature-item .icon {
+        margin-top: 0;
+    }
 }

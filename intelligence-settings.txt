@@ -1,0 +1,20 @@
+Tech Citi Course Recommendations
+Based on your dominant intelligence, Tech Citi suggests specific courses to help you build on your natural strengths.
+
+If your intelligence is Linguistic → Digital Marketing, Blogging Basics, Creative Writing for Kids
+
+If your intelligence is Logical-Mathematical → Python Programming, Data Analytics, Cyber Security
+
+If your intelligence is Spatial → 2D & 3D Animation, Mobile Game Development, Frontend Web Development
+
+If your intelligence is Bodily-Kinesthetic → (No direct course currently available — explore hands-on tech workshops)
+
+If your intelligence is Musical → (No direct course currently available — explore creative media options)
+
+If your intelligence is Interpersonal → (No direct course currently available — explore community-based learning)
+
+If your intelligence is Intrapersonal → Mobile App Development
+
+If your intelligence is Naturalistic → Data Analytics, Mobile App Development
+
+If your intelligence is Existential → (No direct course currently available — explore philosophy & tech resources)

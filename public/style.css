@@ -1,54 +1,25 @@
-/* Offcanvas Navbar General Styles (restored) */
-.offcanvas.offcanvas-start {
-  width: 250px;
-  background: linear-gradient(120deg,#ffe0b2 0%,#e3f2fd 100%);
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-  box-shadow: 2px 0 16px rgba(255,152,0,0.10);
+/* ===================================
+   1. GENERAL & UTILITY STYLES
+   =================================== */
+body {
+    background-color: #fdfcfa; /* A warmer off-white */
 }
-.offcanvas-header {
-  background: linear-gradient(90deg, #FF5733 0%, #ffc107 100%);
-  border-top-right-radius: 1.5rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-} 
-.offcanvas-title {
+
+.text-orange {
+  color: #FF5733 !important;
+}
+
+.btn-orange {
+  background-color: #FF5733;
   color: #fff;
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.offcanvas .nav-link {
-  color: #FF5733 !important;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 0.7rem;
-  border-radius: 0.7rem;
-  transition: background 0.2s, color 0.2s;
-}
-.offcanvas .nav-link.active, .offcanvas .nav-link:focus, .offcanvas .nav-link:hover {
-  background: #ffe0b2;
-  color: #FF5733 !important;
-}
-.navbar-toggler {
   border: none;
-  background: #FF5733;
-  border-radius: 0.7rem;
-  padding: 0.4rem 0.7rem;
-  box-shadow: 0 2px 8px rgba(255,152,0,0.10);
 }
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+.btn-orange:hover, .btn-orange:focus {
+  background-color: #FF5733;
+  color: #fff;
 }
-@media (max-width: 991px) {
-  .navbar .navbar-brand {
-    font-size: 1.5rem;
-  }
-}
-/* General Utility Styles (restored) */
+
 .bg-orange {
   background-color: #FF5733 !important;
   color: #fff !important;
@@ -67,31 +38,18 @@
   letter-spacing: 1px;
 }
 
-body {
-  background-color: #f8f9fa;
-}
+/* ===================================
+   2. NAVBAR STYLES
+   =================================== */
 
-.text-orange {
-  color: #FF5733 !important;
-}
-
-.btn-orange {
-  background-color: #FF5733;
-  color: #fff;
-  border: none;
-}
-
-.btn-orange:hover, .btn-orange:focus {
-  background-color: #FF5733;
-  color: #fff;
-}
-/* Cool Navbar Styles */
+/* --- Main Navbar --- */
 .navbar {
   background: linear-gradient(90deg, #FF5733 0%, #ffc107 100%) !important;
   border-radius: 1.5rem;
   box-shadow: 0 4px 16px rgba(255,152,0,0.12);
   margin-top: 18px;
 }
+
 .navbar .navbar-brand {
   font-size: 2rem;
   font-weight: bold;
@@ -100,9 +58,11 @@ body {
   display: flex;
   align-items: center;
 }
+
 .navbar .navbar-brand i {
   margin-right: 10px;
 }
+
 .navbar .nav-link {
   color: #fff !important;
   font-weight: 500;
@@ -110,20 +70,146 @@ body {
   margin-left: 18px;
   transition: color 0.2s;
 }
+
 .navbar .nav-link:hover {
   color: #fff !important;
   text-decoration: underline;
 }
-/* Modern Quiz Styles */
-.quiz-header {
+
+/* --- Offcanvas (Mobile) Navbar --- */
+.offcanvas.offcanvas-start {
+  width: 250px;
+  background: linear-gradient(120deg,#ffe0b2 0%,#e3f2fd 100%);
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  box-shadow: 2px 0 16px rgba(255,152,0,0.10);
+}
+
+.offcanvas-header {
   background: linear-gradient(90deg, #FF5733 0%, #ffc107 100%);
+  border-top-right-radius: 1.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.offcanvas-title {
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.bg-orange {
-  background-color: #FF5733 !important;
-  color: #fff !important;
+.offcanvas .nav-link {
+  color: #FF5733 !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+  border-radius: 0.7rem;
+  transition: background 0.2s, color 0.2s;
 }
 
+.offcanvas .nav-link.active, .offcanvas .nav-link:focus, .offcanvas .nav-link:hover {
+  background: #ffe0b2;
+  color: #FF5733 !important;
+}
 
+/* --- Navbar Toggler (Hamburger Icon) --- */
+.navbar-toggler {
+  border: none;
+  background: #FF5733;
+  border-radius: 0.7rem;
+  padding: 0.4rem 0.7rem;
+  box-shadow: 0 2px 8px rgba(255,152,0,0.10);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991px) {
+  .navbar .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===================================
+   3. HOMEPAGE SECTION STYLES
+   =================================== */
+
+.section-title {
+    font-weight: 700;
+    color: #FF5733; /* Using the existing orange */
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- "Why TechCiti" Section --- */
+.why-us-section {
+    padding: 60px 0;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.05);
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.feature-item .icon {
+    font-size: 2.5rem;
+    color: #ff9800;
+    margin-top: 5px;
+}
+
+/* --- "Intelligence Types" Section --- */
+.intelligence-section {
+    padding: 60px 0;
+}
+
+.intelligence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.intelligence-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intelligence-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 87, 51, 0.1);
+    border-color: #ff9800;
+}
+
+.intelligence-item i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff9800;
+}
+
+/* --- Final CTA Section --- */
+.final-cta-section {
+    background: linear-gradient(135deg, #FF5733 0%, #ff9800 100%);
+    color: #fff;
+    padding: 60px 20px;
+    border-radius: 20px;
+    text-align: center;
+}

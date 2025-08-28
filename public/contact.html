@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ff9800' d='M432 320h-24V192h24c8.8 0 16-7.2 16-16V80c0-8.8-7.2-16-16-16H16C7.2 64 0 71.2 0 80v96c0 8.8 7.2 16 16 16h24v128H16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16h416c8.8 0 16-7.2 16-16v-96c0-8.8-7.2-16-16-16zm-56 0H72V192h304v128z'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg mb-4">
@@ -27,6 +27,7 @@
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -35,140 +36,75 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <div class="container">
-    <div class="row justify-content-center mb-5 contact-section">
+    <div class="row justify-content-center mb-5">
       <div class="col-lg-8 text-center">
         <h1 class="display-5 fw-bold text-orange mb-3"><i class="fa-solid fa-envelope me-2"></i>Contact Us</h1>
         <p class="lead mb-4">We'd love to hear from you! Reach out for questions, partnership, or support.</p>
       </div>
     </div>
-    <div class="row g-4 mb-5">
-      <div class="col-md-6">
-        <div class="card shadow-sm h-100 border-0" style="background: #FF5733; color: #fff;">
-          <div class="card-body p-4 contact-section">
-            <div class="text-center mb-4">
-              <span class="d-inline-block" style="background:rgba(255,255,255,0.15); border-radius:1rem; padding:0.5rem 1.5rem;">
-                <i class="fa-solid fa-globe fa-2x me-2"></i>
-                <span class="fw-bold techciti-global-title">TechCiti Global</span>
-              </span>
+    <div class="row g-5 mb-5">
+      <div class="col-lg-7">
+        <h3 class="fw-bold text-orange mb-4">Get in Touch</h3>
+        <div class="d-flex align-items-start mb-4">
+            <i class="fa-solid fa-location-dot fa-2x text-orange mt-1 me-4"></i>
+            <div>
+                <h5 class="fw-semibold">Our Office</h5>
+                <p class="mb-0 text-muted">3rd Floor, 8, Sanyaolu Street, Oregun, Lagos.</p>
             </div>
-            <div class="mb-4 d-flex align-items-center ps-3">
-              <i class="fa-solid fa-location-dot me-3 location-icon"></i>
-              <span class="location-address">3rd Floor, 8, Sanyaolu Street, Oregun, Lagos.</span>
+        </div>
+        <div class="d-flex align-items-start mb-4">
+            <i class="fa-solid fa-envelope fa-2x text-orange mt-1 me-4"></i>
+            <div>
+                <h5 class="fw-semibold">Email Us</h5>
+                <p class="mb-0"><a href="mailto:info@techciti.ng" class="text-decoration-none text-dark">info@techciti.ng</a></p>
+                <small class="text-muted">For general inquiries and support.</small>
             </div>
-            <div class="row g-3 ps-2">
-              <div class="col-6 col-md-12 d-flex align-items-center">
-                <a href="#" class="d-flex align-items-center w-100 py-2 px-3 rounded-4 bg-white bg-opacity-25 text-white text-decoration-none fw-bold social-link" style="transition:.2s;">
-                  <i class="fa-solid fa-envelope me-3 social-icon"></i>
-                  <span class="social-text">info@techciti.ng</span>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 d-flex align-items-center">
-                <a href="#" class="d-flex align-items-center w-100 py-2 px-3 rounded-4 bg-white bg-opacity-25 text-white text-decoration-none fw-bold social-link" style="transition:.2s;">
-                  <i class="fa-brands fa-facebook me-3 social-icon"></i>
-                  <span class="social-text">Tech Citi</span>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 d-flex align-items-center">
-                <a href="#" class="d-flex align-items-center w-100 py-2 px-3 rounded-4 bg-white bg-opacity-25 text-white text-decoration-none fw-bold social-link" style="transition:.2s;">
-                  <i class="fa-brands fa-twitter me-3 social-icon"></i>
-                  <span class="social-text">@techciti1</span>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 d-flex align-items-center">
-                <a href="#" class="d-flex align-items-center w-100 py-2 px-3 rounded-4 bg-white bg-opacity-25 text-white text-decoration-none fw-bold social-link" style="transition:.2s;">
-                  <i class="fa-brands fa-instagram me-3 social-icon"></i>
-                  <span class="social-text">@tech.citi</span>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 d-flex align-items-center">
-                <a href="#" class="d-flex align-items-center w-100 py-2 px-3 rounded-4 bg-white bg-opacity-25 text-white text-decoration-none fw-bold social-link" style="transition:.2s;">
-                  <i class="fa-brands fa-youtube me-3 social-icon"></i>
-                  <span class="social-text">@techciti</span>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 d-flex align-items-center">
-                <a href="#" class="d-flex align-items-center w-100 py-2 px-3 rounded-4 bg-white bg-opacity-25 text-white text-decoration-none fw-bold social-link" style="transition:.2s;">
-                  <i class="fa-brands fa-linkedin me-3 social-icon"></i>
-                  <span class="social-text">@techciting</span>
-                </a>
-              </div>
-              <div class="col-6 col-md-6 d-flex align-items-center">
-                <a href="#" class="d-flex align-items-center w-100 py-2 px-3 rounded-4 bg-white bg-opacity-25 text-white text-decoration-none fw-bold social-link" style="transition:.2s;">
-                  <i class="fa-brands fa-whatsapp me-3 social-icon"></i>
-                  <span class="social-text">+2347057800755</span>
-                </a>
-              </div>
+        </div>
+        <div class="d-flex align-items-start mb-4">
+            <i class="fa-brands fa-whatsapp fa-2x text-orange mt-1 me-4"></i>
+            <div>
+                <h5 class="fw-semibold">Chat with Us</h5>
+                <p class="mb-0"><a href="https://wa.me/+2347057800755" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">+234 705 780 0755</a></p>
+                <small class="text-muted">Available during business hours.</small>
             </div>
-          </div>
+        </div>
+        <h5 class="fw-semibold mt-5 mb-3">Follow Us</h5>
+        <div class="d-flex flex-wrap gap-3">
+            <a href="https://www.facebook.com/techciti.ng" target="_blank" rel="noopener noreferrer" class="social-icon-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://x.com/techciti1" target="_blank" rel="noopener noreferrer" class="social-icon-circle" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/tech.citi/" target="_blank" rel="noopener noreferrer" class="social-icon-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/channel/UCYldwkC9iZsTCb0MpfgT3LQ" target="_blank" rel="noopener noreferrer" class="social-icon-circle" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/company/techciting" target="_blank" rel="noopener noreferrer" class="social-icon-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="card shadow-sm h-100">
-          <div class="card-body p-4 contact-section">
-            <h4 class="fw-bold" style="color:#FF5733"><i class="fa-solid fa-paper-plane me-2"></i>Send Us a Message</h4>
-            <form action="https://formspree.io/f/mldljpoo" method="POST">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control rounded-pill px-4 py-2" id="name" name="name" required placeholder="Your full name">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control rounded-pill px-4 py-2" id="email" name="email" required placeholder="you@email.com">
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control rounded-4 px-4 py-2" id="message" name="message" rows="4" required placeholder="Type your message..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-orange w-100 py-2 rounded-pill fs-5 shadow">Send Message <i class="fa-solid fa-paper-plane ms-2"></i></button>
-            </form>
-            <div class="text-center mt-3">
-              <i class="fa-solid fa-lock text-orange"></i>
-              <small class="text-muted d-block mt-1">Your info is safe and will only be used for communication.</small>
-            </div>
-          </div>
+      <div class="col-lg-5">
+        <div class="map-container shadow-sm rounded-3 overflow-hidden">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.213989094531!2d3.361908314771239!3d6.62021699521305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93b5b06c296b%3A0x4332244f51834905!2s8%20Sanyaolu%20St%2C%20Oregun%2C%20Ikeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1678886400000!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="TechCiti Location Map"></iframe>
         </div>
+      </div>
+    </div>
+
+    <!-- Link to FAQ Page -->
+    <div class="row justify-content-center mt-5 pt-5 border-top">
+      <div class="col-lg-8 text-center">
+          <h2 class="fw-bold text-orange mb-3">Have More Questions?</h2>
+          <p class="lead mb-4">We've compiled a list of frequently asked questions to help you find answers fast.</p>
+          <a href="faq.html" class="btn btn-orange btn-lg shadow-sm">
+            <i class="fa-solid fa-circle-question me-2"></i>Visit our FAQ Page
+          </a>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Clear contact form after successful submission
-    document.addEventListener('DOMContentLoaded', function() {
-      var form = document.querySelector('form[action="https://formspree.io/f/mldljpoo"]');
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-          var data = new FormData(form);
-          fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: {
-              'Accept': 'application/json'
-            }
-          }).then(function(response) {
-            if (response.ok) {
-              form.reset();
-              alert('Thank you for contacting us!');
-            } else {
-              response.json().then(function(data) {
-                alert(data.error || 'Oops! There was a problem submitting your message.');
-              });
-            }
-          }).catch(function(error) {
-            alert('Oops! There was a problem submitting your message.');
-          });
-        });
-      }
-    });
-  </script>
 
   <footer class="bg-light text-center py-4 mt-5 rounded shadow-sm">
     <span class="text-orange fw-bold">&copy; 2025 TechCiti &amp; Comibyte Team</span>

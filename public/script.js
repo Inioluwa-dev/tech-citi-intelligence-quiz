@@ -1,252 +1,63 @@
 // Confirm before leaving quiz for Home, but exempt results page
 window.addEventListener('DOMContentLoaded', () => {
   const homeLinks = document.querySelectorAll('.home-link');
-
   homeLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
+    link.addEventListener('click', function (e) {
       const quizPage = document.getElementById('quiz-page');
+      const userDetailsPage = document.getElementById('user-details-page');
       const resultsPage = document.getElementById('results-page');
       const quizVisible = quizPage && !quizPage.classList.contains('d-none');
+      const userDetailsVisible = userDetailsPage && !userDetailsPage.classList.contains('d-none');
       const resultsVisible = resultsPage && !resultsPage.classList.contains('d-none');
-
-      if (quizVisible && !resultsVisible) {
+      if ((quizVisible || userDetailsVisible) && !resultsVisible) {
         const confirmLeave = confirm('Are you sure you want to exit this quiz? \nYour answers will be forfeited.');
         if (!confirmLeave) {
-          e.preventDefault(); // stop the link from navigating
+          e.preventDefault();
         }
       }
     });
   });
 });
 
-// Counter update integrated with quiz logic
 function updateCounter() {
   document.getElementById('current-question').textContent = currentQuestion + 1;
   document.getElementById('total-questions').textContent = quizQuestions.length;
 }
-// Page navigation logic
-const startBtn = document.getElementById('start-quiz-btn');
-const welcomePage = document.getElementById('welcome-page');
+
 const quizPage = document.getElementById('quiz-page');
 const resultsPage = document.getElementById('results-page');
+const userDetailsPage = document.getElementById('user-details-page');
 
-// --- Quiz Data ---
 const intelligences = [
-  {
-    key: 'linguistic',
-    name: 'Linguistic',
-    color: '#ff8800',
-    description: 'You love words, reading, writing, and storytelling!'
-  },
-  {
-    key: 'logical',
-    name: 'Logical-Mathematical',
-    color: '#e67600',
-    description: 'You enjoy solving puzzles, math, and logical problems!'
-  },
-  {
-    key: 'spatial',
-    name: 'Spatial',
-    color: '#ffb84d',
-    description: 'You think in pictures and love drawing, building, or designing!'
-  },
-  {
-    key: 'bodily',
-    name: 'Bodily-Kinesthetic',
-    color: '#b0b0b0',
-    description: 'You learn best by doing, moving, or using your hands!'
-  },
-  {
-    key: 'musical',
-    name: 'Musical',
-    color: '#ffcc80',
-    description: 'You love music, rhythm, and sounds!'
-  },
-  {
-    key: 'interpersonal',
-    name: 'Interpersonal',
-    color: '#ff8800',
-    description: 'You enjoy working with others and making friends!'
-  },
-  {
-    key: 'intrapersonal',
-    name: 'Intrapersonal',
-    color: '#e0e0e0',
-    description: 'You understand yourself well and like to think deeply!'
-  },
-  {
-    key: 'naturalistic',
-    name: 'Naturalistic',
-    color: '#a0a0a0',
-    description: 'You love nature, animals, and the outdoors!'
-  },
-  {
-    key: 'existential',
-    name: 'Existential',
-    color: '#ff8800',
-    description: 'You wonder about big questions and the meaning of life!'
-  }
+  { key: 'linguistic', name: 'Linguistic', color: '#ff8800', description: 'You love words, reading, writing, and storytelling!' },
+  { key: 'logical', name: 'Logical-Mathematical', color: '#e67600', description: 'You enjoy solving puzzles, math, and logical problems!' },
+  { key: 'spatial', name: 'Spatial', color: '#ffb84d', description: 'You think in pictures and love drawing, building, or designing!' },
+  { key: 'bodily', name: 'Bodily-Kinesthetic', color: '#b0b0b0', description: 'You learn best by doing, moving, or using your hands!' },
+  { key: 'musical', name: 'Musical', color: '#ffcc80', description: 'You love music, rhythm, and sounds!' },
+  { key: 'interpersonal', name: 'Interpersonal', color: '#ff8800', description: 'You enjoy working with others and making friends!' },
+  { key: 'intrapersonal', name: 'Intrapersonal', color: '#e0e0e0', description: 'You understand yourself well and like to think deeply!' },
+  { key: 'naturalistic', name: 'Naturalistic', color: '#a0a0a0', description: 'You love nature, animals, and the outdoors!' },
+  { key: 'existential', name: 'Existential', color: '#ff8800', description: 'You wonder about big questions and the meaning of life!' }
 ];
 
-const quizQuestions = [
-  {
-    question: 'What do you enjoy most?',
-    options: [
-      { text: 'Reading stories or writing', intelligence: 'linguistic' },
-      { text: 'Solving puzzles or math problems', intelligence: 'logical' },
-      { text: 'Drawing or building things', intelligence: 'spatial' },
-      { text: 'Playing sports or dancing', intelligence: 'bodily' }
-    ]
-  },
-  {
-    question: 'Which activity sounds most fun?',
-    options: [
-      { text: 'Singing or playing an instrument', intelligence: 'musical' },
-      { text: 'Making new friends', intelligence: 'interpersonal' },
-      { text: 'Thinking about your feelings', intelligence: 'intrapersonal' },
-      { text: 'Exploring nature', intelligence: 'naturalistic' }
-    ]
-  },
-  {
-    question: 'What do you think about often?',
-    options: [
-      { text: 'The meaning of life or big questions', intelligence: 'existential' },
-      { text: 'How things work', intelligence: 'logical' },
-      { text: 'Your favorite song', intelligence: 'musical' },
-      { text: 'Your next adventure outside', intelligence: 'naturalistic' }
-    ]
-  },
-  {
-    question: 'How do you like to learn?',
-    options: [
-      { text: 'By reading or listening to stories', intelligence: 'linguistic' },
-      { text: 'By doing experiments', intelligence: 'logical' },
-      { text: 'By drawing or using maps', intelligence: 'spatial' },
-      { text: 'By moving or acting things out', intelligence: 'bodily' }
-    ]
-  },
-  {
-    question: 'Which do you prefer?',
-    options: [
-      { text: 'Playing music', intelligence: 'musical' },
-      { text: 'Helping others', intelligence: 'interpersonal' },
-      { text: 'Spending time alone', intelligence: 'intrapersonal' },
-      { text: 'Watching animals or plants', intelligence: 'naturalistic' }
-    ]
-  },
-  {
-    question: 'What do you do when you have free time?',
-    options: [
-      { text: 'Read or write', intelligence: 'linguistic' },
-      { text: 'Solve riddles', intelligence: 'logical' },
-      { text: 'Draw or make crafts', intelligence: 'spatial' },
-      { text: 'Play outside', intelligence: 'bodily' }
-    ]
-  },
-  {
-    question: 'What makes you happiest?',
-    options: [
-      { text: 'Listening to music', intelligence: 'musical' },
-      { text: 'Being with friends', intelligence: 'interpersonal' },
-      { text: 'Thinking about your dreams', intelligence: 'intrapersonal' },
-      { text: 'Exploring the world', intelligence: 'existential' }
-    ]
-  },
-  {
-    question: 'Which would you choose for a school project?',
-    options: [
-      { text: 'Write a story or poem', intelligence: 'linguistic' },
-      { text: 'Build a robot or gadget', intelligence: 'bodily' },
-      { text: 'Design a poster or map', intelligence: 'spatial' },
-      { text: 'Make a music video', intelligence: 'musical' }
-    ]
-  },
-  {
-    question: 'What do you like to talk about with friends?',
-    options: [
-      { text: 'Big ideas and life questions', intelligence: 'existential' },
-      { text: 'Animals and nature', intelligence: 'naturalistic' },
-      { text: 'Games and puzzles', intelligence: 'logical' },
-      { text: 'Your feelings and dreams', intelligence: 'intrapersonal' }
-    ]
-  },
-  {
-    question: 'How do you prefer to spend a weekend?',
-    options: [
-      { text: 'Reading or writing', intelligence: 'linguistic' },
-      { text: 'Playing music or singing', intelligence: 'musical' },
-      { text: 'Exploring outdoors', intelligence: 'naturalistic' },
-      { text: 'Doing art or crafts', intelligence: 'spatial' }
-    ]
-  }
-];
-// Timer logic
-let timerInterval;
-let totalTime = 5 * 60; // 5 minutes in seconds
-let timeLeft = totalTime;
-
-function startTimer() {
-  updateTimerDisplay();
-  timerInterval = setInterval(() => {
-    timeLeft--;
-    updateTimerDisplay();
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      // Show alert and offer retry or go home
-      setTimeout(() => {
-        const quizContainer = document.getElementById('quiz-container');
-        quizContainer.innerHTML = `
-          <div class="alert alert-warning text-center">
-            <strong>Time's up!</strong> You did not answer the question in time.<br>
-            <button id="retry-btn" class="btn btn-orange mt-3">Try Again</button>
-            <a href="index.html" class="btn btn-secondary mt-3 ms-2">Go to Home</a>
-          </div>
-        `;
-        // Add event listener for retry
-        document.getElementById('retry-btn').onclick = function() {
-          currentQuestion = 0;
-          for (const k in scores) scores[k] = 0;
-          document.getElementById('results-container').innerHTML = '';
-          timeLeft = totalTime;
-          showQuestion(currentQuestion);
-          startTimer();
-        };
-      }, 100);
-    }
-  }, 1000);
-}
-
-function updateTimerDisplay() {
-  const min = Math.floor(timeLeft / 60);
-  const sec = timeLeft % 60;
-  document.getElementById('timer-min').textContent = min.toString().padStart(2, '0');
-  document.getElementById('timer-sec').textContent = sec.toString().padStart(2, '0');
-}
-
-// --- Quiz Logic ---
+let quizQuestions = [];
 let currentQuestion = 0;
 let scores = {};
+let userAnswers = [];
 intelligences.forEach(i => scores[i.key] = 0);
 
-function showQuestion(index) {
-  const q = quizQuestions[index];
-  let html = `<h2 class="mb-4">${q.question}</h2><div class="list-group">`;
-  q.options.forEach((opt, i) => {
-    html += `<button class="list-group-item list-group-item-action mb-2" onclick="selectOption('${opt.intelligence}')">${opt.text}</button>`;
-  });
-  html += '</div>';
-  document.getElementById('quiz-container').innerHTML = html;
-  updateCounter();
-}
-
-window.selectOption = function(intelligence) {
-  scores[intelligence]++;
-  currentQuestion++;
-  if (currentQuestion < quizQuestions.length) {
-    showQuestion(currentQuestion);
-  } else {
-    showResults();
-  }
+const courseLinks = {
+  "2D & 3D Animation": "https://techciti.ng/courses/comprehensive-course-in-2d-3d-animation/",
+  "Cyber Security": "https://techciti.ng/courses/cyber-security/",
+  "Data Analytics": "https://techciti.ng/courses/data-analytics/",
+  "Digital Marketing": "https://techciti.ng/courses/digital-marketing/",
+  "Full Stack Web Dev": "https://techciti.ng/courses/full-stack-web-development/",
+  "JavaScript": "https://techciti.ng/courses/javascript/",
+  "Mobile Game Dev": "https://techciti.ng/courses/mastering-mobile-game-development/",
+  "WordPress": "https://techciti.ng/mastering-wordpress/",
+  "Mobile App Dev": "https://techciti.ng/courses/mobile-app-development/",
+  "Python Programming": "https://techciti.ng/courses/python-programming/",
+  "Frontend Web Dev": "https://techciti.ng/courses/front-web-development/"
 };
 
 const recommendations = {
@@ -258,49 +69,197 @@ const recommendations = {
   logical: {
     path: 'Programming, Data Analytics, Cyber Security',
     careers: ['Software Developer', 'Data Analyst', 'Cybersecurity Specialist'],
-    courses: ['Python Programming', 'Data Analytics', 'Cyber Security Basics']
+    courses: ['Python Programming', 'Data Analytics', 'Cyber Security']
   },
   spatial: {
     path: 'Animation, Game Development, Web Design',
     careers: ['Animator', 'Game Designer', 'UI/UX Designer'],
-    courses: ['2D/3D Animation', 'Mastering Mobile Game Development', 'Web Design Basics']
+    courses: ['2D & 3D Animation', 'Mobile Game Dev', 'Frontend Web Dev']
   },
   bodily: {
     path: 'Robotics, Interactive Media, Physical Computing',
     careers: ['Robotics Engineer', 'VR/AR Developer', 'Maker/Inventor'],
-    courses: ['Robotics for Kids', 'Introduction to VR/AR', 'Physical Computing']
+    courses: ['Robotics for Beginners', 'VR Basics', 'Physical Computing']
   },
   musical: {
     path: 'Audio Production, Game Sound Design, Multimedia',
     careers: ['Sound Designer', 'Music Producer', 'Multimedia Specialist'],
-    courses: ['Audio Editing Basics', 'Game Sound Design', 'Multimedia Creation']
+    courses: ['Audio Editing Basics', 'Music Production', 'Sound Design for Games']
   },
   interpersonal: {
     path: 'Project Management, Community Management, EdTech',
     careers: ['Project Manager', 'Community Manager', 'Tech Educator'],
-    courses: ['Digital Teachers Webinar', 'Project Management Basics', 'EdTech for Kids']
+    courses: ['Leadership Skills', 'Team Collaboration Tools', 'Communication in Tech']
   },
   intrapersonal: {
     path: 'Blogging, App Development, Self-paced Learning',
     careers: ['Blogger', 'App Developer', 'Independent Researcher'],
-    courses: ['Blogging Basics', 'Mobile App Development', 'Self-paced Coding']
+    courses: ['Mobile App Dev', 'Self-paced Coding', 'Personal Branding']
   },
   naturalistic: {
     path: 'Environmental Tech, Data Science, Nature Apps',
     careers: ['Environmental Data Analyst', 'App Developer (Nature/Science)', 'Science Communicator'],
-    courses: ['Data Analytics', 'App Development', 'Science & Nature Apps']
+    courses: ['Data Analytics', 'Environmental Science & Tech', 'Nature App Design']
   },
   existential: {
     path: 'Philosophy in Tech, AI Ethics, Social Impact Tech',
     careers: ['AI Ethicist', 'Social Entrepreneur', 'Tech Philosopher'],
-    courses: ['AI & Ethics for Kids', 'Social Impact Tech', 'Philosophy & Technology']
+    courses: ['AI & Ethics', 'Social Impact of Technology', 'Philosophy & Innovation']
+  }
+};
+
+function showQuestion(index) {
+  const q = quizQuestions[index];
+  let shuffledOptions;
+  if (!q._shuffled) {
+    shuffledOptions = q.options.slice().sort(() => Math.random() - 0.5);
+    q._shuffled = shuffledOptions;
+  } else {
+    shuffledOptions = q._shuffled;
+  }
+
+  let html = `<h2 class="mb-4">${q.question}</h2><form id="quiz-form"><div class="row">`;
+  const half = Math.ceil(shuffledOptions.length / 2);
+  for (let col = 0; col < 2; col++) {
+    html += '<div class="col-md-6">';
+    for (let i = col * half; i < (col + 1) * half && i < shuffledOptions.length; i++) {
+      const opt = shuffledOptions[i];
+      const label = String.fromCharCode(97 + i);
+      let checked = userAnswers[index] === opt.intelligence ? 'checked' : '';
+      html += `
+        <label class="quiz-option-card mb-3 w-100">
+          <input type="radio" name="answer" value="${opt.intelligence}" class="quiz-radio" ${checked} />
+          <span class="quiz-radio-custom"></span>
+          <span class="quiz-option-label"><strong>${label.toUpperCase()}.</strong> ${opt.text}</span>
+        </label>
+      `;
+    }
+    html += '</div>';
+  }
+  html += '</div><div class="d-flex gap-2 mt-3">';
+  html += `<button type="button" id="back-btn" class="btn btn-secondary btn-lg w-50" ${index === 0 ? 'disabled' : ''}>Back</button>`;
+  html += '<button type="submit" class="btn btn-orange btn-lg w-50">Next</button></div></form>';
+  document.getElementById('quiz-container').innerHTML = html;
+  updateCounter();
+
+  document.getElementById('quiz-form').onsubmit = function (e) {
+    e.preventDefault();
+    const selected = document.querySelector('input[name="answer"]:checked');
+    if (selected) {
+      userAnswers[index] = selected.value;
+      selectOption(selected.value, false);
+    } else {
+      alert('Please select an answer to continue.');
+    }
+  };
+  document.getElementById('back-btn').onclick = function () {
+    if (index > 0) {
+      currentQuestion--;
+      showQuestion(currentQuestion);
+    }
+  };
+}
+
+function validateUserDetailsForm() {
+  let isValid = true;
+  const form = document.getElementById('user-details-form');
+  const name = form.querySelector('#user-name');
+  const email = form.querySelector('#user-email');
+  const phone = form.querySelector('#user-phone');
+  const location = form.querySelector('#user-location');
+
+  // Reset validation states
+  [name, email, phone, location].forEach(input => {
+    input.classList.remove('is-invalid');
+  });
+
+  // Validate Name
+  if (name.value.trim() === '') {
+    name.classList.add('is-invalid');
+    isValid = false;
+  }
+
+  // Validate Email
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email.value.trim())) {
+    email.classList.add('is-invalid');
+    isValid = false;
+  }
+
+  // Validate Phone: simple check for at least 7 digits
+  const phonePattern = /^\d{7,}$/;
+  if (!phonePattern.test(phone.value.replace(/\s/g, ''))) {
+    phone.classList.add('is-invalid');
+    isValid = false;
+  }
+
+  // Validate Location
+  if (location.value.trim() === '') {
+    location.classList.add('is-invalid');
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+function showUserDetailsForm() {
+  quizPage.classList.add('d-none');
+  userDetailsPage.classList.remove('d-none');
+  const form = document.getElementById('user-details-form');
+  form.onsubmit = function (e) {
+    e.preventDefault();
+    if (validateUserDetailsForm()) {
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.innerHTML;
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting...';
+
+      const data = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          userDetailsPage.classList.add('d-none');
+          showResults();
+        } else {
+          response.json().then(data => {
+            alert(data.error || 'Oops! There was a problem submitting your details.');
+          });
+        }
+      }).catch(error => {
+        alert('Oops! There was a problem submitting your details.');
+      }).finally(() => {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+      });
+    }
+  };
+}
+
+window.selectOption = function (intelligence, isBackNav) {
+  if (!isBackNav) {
+    scores = {};
+    intelligences.forEach(i => scores[i.key] = 0);
+    for (let i = 0; i < userAnswers.length; i++) {
+      if (userAnswers[i]) {
+        scores[userAnswers[i]]++;
+      }
+    }
+  }
+  currentQuestion++;
+  if (currentQuestion < quizQuestions.length) {
+    showQuestion(currentQuestion);
+  } else {
+    showUserDetailsForm();
   }
 };
 
 function showResults() {
   quizPage.classList.add('d-none');
   resultsPage.classList.remove('d-none');
-  // Find dominant intelligence
   let max = 0, dominant = [];
   for (const key in scores) {
     if (scores[key] > max) {
@@ -310,10 +269,10 @@ function showResults() {
       dominant.push(key);
     }
   }
-  let resultHtml = `<div class="mb-4">
-    <h2 class="text-orange fw-bold"><i class="fa-solid fa-award me-2"></i>Your Dominant Intelligence</h2>
-    <p class="lead">Congratulations! Here are your top strengths and personalized tech recommendations:</p>
-  </div>`;
+  let resultHtml = `<div class="mb-4"><h2 class="text-orange fw-bold"><i class="fa-solid fa-award me-2"></i>Your Dominant Intelligence</h2><p class="lead">Congratulations! Here are your top strengths and personalized tech recommendations:</p></div>`;
+
+  let textResult = 'Your Dominant Intelligence\n';
+
   dominant.forEach(key => {
     const intel = intelligences.find(i => i.key === key);
     const rec = recommendations[key];
@@ -330,51 +289,58 @@ function showResults() {
       case 'existential': icon = 'fa-question'; break;
       default: icon = 'fa-star';
     }
-    resultHtml += `<div class="my-4 p-4 rounded shadow-sm" style="background:${intel.color}22">
-      <div class="mb-3">
-        <i class="fa-solid ${icon} fa-2x text-orange"></i>
-        <h3 class="d-inline-block ms-2 fw-bold">${intel.name}</h3>
-      </div>
-      <p class="mb-2">${intel.description}</p>
-      <div class="row text-start">
-        <div class="col-md-4 mb-2">
-          <h5 class='mt-3 text-orange'>Tech Path</h5>
-          <p>${rec.path}</p>
-        </div>
-        <div class="col-md-4 mb-2">
-          <h5 class='text-orange'>Careers</h5>
-          <ul>${rec.careers.map(c => `<li>${c}</li>`).join('')}</ul>
-        </div>
-        <div class="col-md-4 mb-2">
-          <h5 class='text-orange'>Courses</h5>
-          <ul>${rec.courses.map(c => `<li>${c}</li>`).join('')}</ul>
-        </div>
-      </div>
-    </div>`;
-  });
-  resultHtml += `<div class="mt-4">
-    <p class="text-success fw-bold"><i class="fa-solid fa-thumbs-up me-2"></i>Keep exploring, learning, and growing your unique talents!</p>
-  </div>`;
-  document.getElementById('results-container').innerHTML = resultHtml;
 
-  // Store plain text version of results for export
-  let textResult = 'Your Dominant Intelligence\n';
-  dominant.forEach(key => {
-    const intel = intelligences.find(i => i.key === key);
-    const rec = recommendations[key];
+    const techCitiCourses = rec.courses.filter(c => courseLinks[c]);
+    resultHtml += `
+      <div class="my-4 p-4 rounded shadow-sm" style="background:${intel.color}22">
+        <div class="mb-3">
+          <i class="fa-solid ${icon} fa-2x text-orange"></i>
+          <h3 class="d-inline-block ms-2 fw-bold">${intel.name}</h3>
+        </div>
+        <p class="mb-2">${intel.description}</p>
+        <div class="row text-start">
+          <div class="col-md-4 mb-2">
+            <h5 class='mt-3 text-orange'>Tech Path</h5>
+            <p>${rec.path}</p>
+          </div>
+          <div class="col-md-4 mb-2">
+            <h5 class='text-orange'>Careers</h5>
+            <ul>${rec.careers.map(c => `<li>${c}</li>`).join('')}</ul>
+          </div>
+          <div class="col-md-4 mb-2">
+            <h5 class='text-orange'>Courses</h5>
+            <ul>${rec.courses.map(c => `<li>${c}</li>`).join('')}</ul>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h6 class="mb-2 text-muted">Tech Citi Recommended Courses</h6>
+          ${techCitiCourses.length > 0
+            ? `<div class="d-flex flex-wrap gap-2">${techCitiCourses.map(c => `<a href="${courseLinks[c]}" target="_blank" rel="noopener noreferrer" class="badge bg-orange text-decoration-none" style="opacity:0.92;">${c}</a>`).join('')}</div>`
+            : `<p class="text-muted mb-1" style="font-size:0.9em;">No specific courses to recommend based on your results.</p>`
+          }
+          <a href="https://techciti.ng/courses/" target="_blank" rel="noopener noreferrer" class="text-muted d-block mt-2" style="font-size:0.9em;">Check other courses...</a>
+        </div>
+      </div>
+    `;
+
     textResult += `\n${intel.name}\n${intel.description}\n`;
     textResult += `Tech Path: ${rec.path}\n`;
     textResult += `Careers: ${rec.careers.join(', ')}\n`;
     textResult += `Courses: ${rec.courses.join(', ')}\n`;
+    if (techCitiCourses.length > 0) {
+      textResult += `Tech Citi Recommended: ${techCitiCourses.join(', ')}\n`;
+    }
+    textResult += `Check all courses at: https://techciti.ng/courses/\n`;
   });
-  textResult += '\nKeep exploring, learning, and growing your unique talents!';
 
-  // Set up Copy and Download buttons
+  textResult += '\nKeep exploring, learning, and growing your unique talents!';
+  document.getElementById('results-container').innerHTML = resultHtml;
+
   setTimeout(() => {
     const copyBtn = document.getElementById('copy-results-btn');
     const downloadBtn = document.getElementById('download-results-btn');
     if (copyBtn) {
-      copyBtn.onclick = function() {
+      copyBtn.onclick = function () {
         navigator.clipboard.writeText(textResult)
           .then(() => {
             copyBtn.innerText = 'Copied!';
@@ -383,7 +349,7 @@ function showResults() {
       };
     }
     if (downloadBtn) {
-      downloadBtn.onclick = function() {
+      downloadBtn.onclick = function () {
         const blob = new Blob([textResult], { type: 'text/plain' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -400,28 +366,30 @@ function showResults() {
   }, 100);
 }
 
-// Show first question automatically on page load
 window.addEventListener('DOMContentLoaded', () => {
-  currentQuestion = 0;
-  for (const k in scores) scores[k] = 0;
-  timeLeft = totalTime;
-  showQuestion(currentQuestion);
-  startTimer();
+  fetch('quiz-questions.json')
+    .then(response => response.json())
+    .then(data => {
+      quizQuestions = data.sort(() => Math.random() - 0.5);
+      currentQuestion = 0;
+      for (const k in scores) scores[k] = 0;
+      userAnswers = [];
+      showQuestion(currentQuestion);
+    });
 });
 
-// Add event listener for Try Again button
 setTimeout(() => {
   const tryAgainBtn = document.getElementById('try-again-btn');
   if (tryAgainBtn) {
     tryAgainBtn.addEventListener('click', () => {
       resultsPage.classList.add('d-none');
+      userDetailsPage.classList.add('d-none');
       quizPage.classList.remove('d-none');
       currentQuestion = 0;
       for (const k in scores) scores[k] = 0;
+      userAnswers = [];
       document.getElementById('results-container').innerHTML = '';
-      timeLeft = totalTime;
       showQuestion(currentQuestion);
-      startTimer();
     });
   }
 }, 100);
